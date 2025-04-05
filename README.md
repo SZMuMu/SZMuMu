@@ -1,14 +1,1 @@
-graph TD;
-    A[输入数据(batch, 1, 28, 28)] --> B[nn.Conv2d(1, 6, 5, 1)];
-    B --> C[nn.ReLU()];
-    C --> D[nn.MaxPool2d(2, 2)];
-    D --> E[nn.Conv2d(6, 16, 5, 1)];
-    E --> F[nn.ReLU()];
-    F --> G[nn.MaxPool2d(2, 2)];
-    G --> H[展平操作view(x.size(0), -1)];
-    H --> I[nn.Linear(256, 120)];
-    I --> J[nn.ReLU()];
-    J --> K[nn.Linear(120, 84)];
-    K --> L[nn.ReLU()];
-    L --> M[nn.Linear(84, 10)];
-    M --> N[输出数据(batch, 10)];
+
